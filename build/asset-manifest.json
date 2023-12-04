@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.1dbf73e1.css",
+    "main.js": "/Portfolio/static/js/main.2189f862.js",
+    "static/media/portfolio-img.png": "/Portfolio/static/media/portfolio-img.6c2697ec06ca1381aa10.png",
+    "static/media/NGUYENMINHHIEU-FE.pdf": "/Portfolio/static/media/NGUYENMINHHIEU-FE.79264ace9b4337106c59.pdf",
+    "static/media/pj_2.jpg": "/Portfolio/static/media/pj_2.902e24e8f254a2de3274.jpg",
+    "static/media/pj_3.jpg": "/Portfolio/static/media/pj_3.5b8986b658937be20efb.jpg",
+    "static/media/queuingsystem.jpg": "/Portfolio/static/media/queuingsystem.8f8b54ca25c53aedd98f.jpg",
+    "static/media/insight.jpg": "/Portfolio/static/media/insight.30a5ce789dd722679245.jpg",
+    "static/media/bg2.jpg": "/Portfolio/static/media/bg2.e6fe0abcb2a72bd51eee.jpg",
+    "static/media/pj_4.jpg": "/Portfolio/static/media/pj_4.a12a47ea9b1d2c943f86.jpg",
+    "static/media/pj_1.jpg": "/Portfolio/static/media/pj_1.a95257e733927911081c.jpg",
+    "static/media/Cat2.png": "/Portfolio/static/media/Cat2.61a57dcd21c56f44d25b.png",
+    "index.html": "/Portfolio/index.html",
+    "main.1dbf73e1.css.map": "/Portfolio/static/css/main.1dbf73e1.css.map",
+    "main.2189f862.js.map": "/Portfolio/static/js/main.2189f862.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1dbf73e1.css",
+    "static/js/main.2189f862.js"
+  ]
+}
