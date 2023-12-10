@@ -2,9 +2,6 @@ import React, { useState } from 'react'
 import './header.css'
 import avatar from '../../assets/avatar.jpeg'
 import Button from '../Button/Button'
-import CV from '../../assets/NGUYENMINHHIEU-FE.pdf'
-import logo from '../../assets/logo.png'
-
 import { AiFillInstagram, AiFillGithub } from 'react-icons/ai'
 import { BsFacebook } from 'react-icons/bs'
 import { GiCat } from 'react-icons/gi'
@@ -53,13 +50,9 @@ function Header() {
           <img src={avatar}></img>
         </div>
         <div className='header_info-button'>
-          <Button btnStyle='outline' btnText='Download CV' btnLink={CV} download />
+          <Button btnStyle='outline' btnText='Download CV' btnLink={"#"} download />
           <Button btnStyle='primary' btnText="Let' Talk" btnLink='#contact' />
         </div>
-      </div>
-
-      <div className='header_logo'>
-        <img src={logo} />
       </div>
 
       <div className='header_socials'>

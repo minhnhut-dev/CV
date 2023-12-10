@@ -32,7 +32,8 @@ function Project() {
 
       <div className='section_header'>
         <span>What i did ?</span>
-        <h3>Projects</h3>
+        <h3>company project
+        </h3>
       </div>
 
       <div className="projects_container">

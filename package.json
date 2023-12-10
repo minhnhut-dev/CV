@@ -1,6 +1,5 @@
 {
   "name": "portfolio_1",
-  "homepage": "http://melkior-nguyen.github.io/Portfolio/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -3,34 +3,28 @@ import { topContext } from '../../App'
 import './skill.css'
 import Card from './Card'
 
-import { AiOutlineHtml5, AiFillGithub } from 'react-icons/ai'
-import { DiCss3, DiPython } from 'react-icons/di'
-import { SiJavascript, SiAmazonaws, SiFirebase } from 'react-icons/si'
+import { SiDocker, SiRubyonrails, SiCircleci} from 'react-icons/si'
 import { RiReactjsFill } from 'react-icons/ri'
-import { BsGit, BsFillDatabaseFill } from 'react-icons/bs'
-import { TbBrandRedux, TbBrandTypescript, TbBrandVscode } from 'react-icons/tb'
+import { BsGit } from 'react-icons/bs'
+import { TbBrandRedux, TbBrandTypescript } from 'react-icons/tb'
+import { TbBrandNextjs } from "react-icons/tb";
+import { GrDeploy } from "react-icons/gr";
+import { AiOutlineDeploymentUnit } from "react-icons/ai";
 
-
-const skills = ['html', 'css', 'javascript', 'reactjs', 'git', 'github', 'vscode', 'typescript', 'redux', 'Firebase', 'python', 'database', 'aws',]
+const skills = ['Ruby on rails', 'Reactjs', 'NextJS', 'Git', 'Typescript', 'Redux', 'CI/CD', 'Docker', 'Deployment']
 const skillsColor = ['#e34f26', '#1b73ba', '#e9ca32', '#61dafb', '#e84d31', '#f2f2f2', '#45a7e1', '#2f74c0', '#7347b6', '#f68410', '#f2d96b', '#a31d23', '#ea901d',]
 
 const htmlCom = function (index) {
-  const html = <AiOutlineHtml5 />
-  const css = <DiCss3 />
-  const javascript = <SiJavascript />
+  const ruby_on_rails = <SiRubyonrails />
+  const nextjs = <TbBrandNextjs />
   const react = <RiReactjsFill />
   const git = <BsGit />
-  const github = <AiFillGithub />
-  const vscode = <TbBrandVscode />
   const typescript = <TbBrandTypescript />
   const redux = <TbBrandRedux />
-  const firebase = <SiFirebase />
-  const python = <DiPython />
-  const database = <BsFillDatabaseFill />
-  const aws = <SiAmazonaws />
-
-  const skillsIcon = [html, css, javascript, react, git, github, vscode, typescript, redux, firebase, python, database, aws]
-
+  const ci_cd = <SiCircleci />
+  const docker = < SiDocker />
+  const deploy = <AiOutlineDeploymentUnit />
+  const skillsIcon = [ruby_on_rails, react, nextjs,  git, typescript, redux, ci_cd, docker, deploy]
   return skillsIcon[index]
 }
 

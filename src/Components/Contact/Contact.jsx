@@ -48,7 +48,7 @@ function Contact() {
         <div className="contact_container-right">
           <div className="sub_drop">
             <SiGmail />
-            <a href="mailto:minhhieunnguyen7397@gmail.com" target='_blank'>Send Email</a>
+            <a href="mailto:nhutphamdev@gmail.com" target='_blank'>Send Email</a>
           </div>
           <div className="sub_drop">
             <RiMessengerLine />

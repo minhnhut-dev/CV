@@ -1,6 +1,7 @@
 import { useState, createContext } from 'react'
 import './App.css';
 import { Background, Header, Navbar, About, Project, Skill, Contact, Footer } from './Components/import.js';
+import Education from "./Components/Education/Education";
 
 
 export const topContext = createContext()
@@ -14,6 +15,7 @@ function App() {
         <Header />
         <Navbar result = {componentTop}/>
         <About />
+        {/*<Education />*/}
         <Project />
         <Skill />
         <Contact />

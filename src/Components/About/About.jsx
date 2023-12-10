@@ -29,10 +29,8 @@ function About() {
           <span>N</span>ame: Pham Minh Nhut <br/>
           <span>B</span>irthday: 10/10/2000.<br/>
           <span>B</span>orn: Ben Tre Province <br/>
-          <span>L</span>iving:  HO CHI MINH City, District 11. <br/><br/>
-          <span>I</span>'m a student majoring in construction engineering at HO CHI MINH City University of Technology and have a longstanding passion for mathematics, design and especially PROGRAMMING .<br />
-          <span>I</span>'m a SELF-TAUGHT UI developer looking for a beginner position. Hope to be able to learn and gain experience working as a front-end developer oriented to a FULL-STACK developer through many projects. <br /><br/>
-          Also would like to learn and solve difficult problems within a team environment to help a business accelerate and grow.<br />
+          <span>L</span>iving:  HO CHI MINH City, District 7. <br/><br/>
+          <span>I</span>'m a student majoring in construction engineering at HO CHI MINH University Of Science and have a longstanding passion for mathematics, design and especially PROGRAMMING .<br />
           <span>M</span>oreover, I'm a CAT lover guy and ... <span>"Never too late to begin!"</span>
         </p>
       </div>
