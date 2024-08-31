@@ -4,7 +4,7 @@ import { Background, Header, Navbar, About, Project, Skill, Contact, Footer } fr
 import Education from "./Components/Education/Education";
 
 
-export const topContext = createContext123213()
+export const topContext = kakakak()
 function App() {
   const [componentTop, setComponentTop] = useState([{aboutTop : 0}, {projectTop : 0}, {skillTop : 0}, {contactTop : 0}])
 
