@@ -1,0 +1,18 @@
+
+services:
+  app:
+    build: .
+    ports:
+      - "4000:3000"
+    command: npm run start
+    volumes:
+      - .:/app
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/minhnhut-portfolio.conf:/etc/nginx/conf.d/minhnhut-portfolio.conf
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - app
