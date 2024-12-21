@@ -7,15 +7,14 @@ import { SiDocker, SiRubyonrails, SiCircleci} from 'react-icons/si'
 import { RiReactjsFill } from 'react-icons/ri'
 import { BsGit } from 'react-icons/bs'
 import { TbBrandRedux, TbBrandTypescript } from 'react-icons/tb'
-import { TbBrandNextjs } from "react-icons/tb";
-import { GrDeploy } from "react-icons/gr";
+import { TbBrandNextjs, TbBrandGolang } from "react-icons/tb";
 import { AiOutlineDeploymentUnit } from "react-icons/ai";
 
-const skills = ['Ruby on rails', 'Reactjs', 'NextJS', 'Git', 'Typescript', 'Redux', 'CI/CD', 'Docker', 'Deployment']
-const skillsColor = ['#e34f26', '#1b73ba', '#e9ca32', '#61dafb', '#e84d31', '#f2f2f2', '#45a7e1', '#2f74c0', '#7347b6', '#f68410', '#f2d96b', '#a31d23', '#ea901d',]
+const skills = ['Ruby on rails', 'Reactjs', 'NextJS', 'Git', 'Typescript', 'Redux', 'CI/CD', 'Docker', 'Deployment', 'Golang']
+const skillsColor = ['#e34f26', '#1b73ba', '#e9ca32', '#61dafb', '#e84d31', '#f2f2f2', '#45a7e1', '#2f74c0', '#7347b6', '#f68410', '#f2d96b', '#a31d23', '#ea901d', '#2f74c0']
 
-const htmlCom = function (index) {
-  const ruby_on_rails = <SiRubyonrails />
+const htmlSkillIcon = function (index) {
+  const ruby = <SiRubyonrails />
   const nextjs = <TbBrandNextjs />
   const react = <RiReactjsFill />
   const git = <BsGit />
@@ -24,7 +23,8 @@ const htmlCom = function (index) {
   const ci_cd = <SiCircleci />
   const docker = < SiDocker />
   const deploy = <AiOutlineDeploymentUnit />
-  const skillsIcon = [ruby_on_rails, react, nextjs,  git, typescript, redux, ci_cd, docker, deploy]
+  const golang = <TbBrandGolang />
+  const skillsIcon = [ruby, react, nextjs,  git, typescript, redux, ci_cd, docker, deploy, golang]
   return skillsIcon[index]
 }
 
@@ -50,7 +50,7 @@ function Skill() {
 
       <div className="skills_container">
         {skills.map((skill, index) => {
-          return <Card key={index} cardColor={skillsColor[index]} cardIcon={htmlCom(index)} cardName={skill} />
+          return <Card key={index} cardColor={skillsColor[index]} cardIcon={htmlSkillIcon(index)} cardName={skill} />
         })}
       </div>
     </section>
