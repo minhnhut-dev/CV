@@ -52,7 +52,7 @@ function Contact() {
           </div>
           <div className="sub_drop">
             <RiMessengerLine />
-            <a href='#' target='_blank'>Send Message</a>
+            <a href='https://www.linkedin.com/in/minh-nh%E1%BB%B1t-ph%E1%BA%A1m-a35735229/' target='_blank'>Send Message</a>
           </div>
         </div>
 

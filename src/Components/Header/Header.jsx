@@ -2,17 +2,16 @@ import React, { useState } from 'react'
 import './header.css'
 import avatar from '../../assets/avatar.jpeg'
 import Button from '../Button/Button'
-import { AiFillInstagram, AiFillGithub } from 'react-icons/ai'
+import { AiFillInstagram, AiFillGithub, AiOutlineLinkedin } from 'react-icons/ai'
 import { BsFacebook } from 'react-icons/bs'
 import { GiCat } from 'react-icons/gi'
 import { FaCat } from 'react-icons/fa'
 import { RiDoubleQuotesL, RiDoubleQuotesR } from 'react-icons/ri'
 
-
 function Header() {
   const [cat, setCat] = useState(true)
 
-
+  const cvLink = '/CV-PHAM-MINH-NHUT.pdf'
   return (
     <section className='main_section header' id='home'>
 
@@ -50,16 +49,16 @@ function Header() {
           <img src={avatar}></img>
         </div>
         <div className='header_info-button'>
-          <Button btnStyle='outline' btnText='Download CV' btnLink={"#"} download />
+          <Button btnStyle='outline' btnText='Download CV' btnLink={cvLink} download />
           <Button btnStyle='primary' btnText="Let' Talk" btnLink='#contact' />
         </div>
       </div>
 
       <div className='header_socials'>
-        <a href='https://www.instagram.com/melkior_nguyen/' target='_blank'><AiFillInstagram /></a>
-        <a href='https://www.facebook.com/chubanmeo7397/' target='_blank'><BsFacebook /></a>
-        <a href='https://github.com/melkior-nguyen' target='_blank'><AiFillGithub /></a>
-        <div></div>
+        <a href='#' target='_blank'><AiFillInstagram /></a>
+        <a href='https://www.facebook.com/minh.nhut.905279/' target='_blank'><BsFacebook /></a>
+        <a href='#' target='_blank'><AiFillGithub /></a>
+        <a href='https://www.linkedin.com/feed' target='_blank'><AiOutlineLinkedin/></a>
       </div>
 
       {/* Sub */}
