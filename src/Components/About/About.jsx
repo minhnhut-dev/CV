@@ -31,7 +31,8 @@ function About() {
           <span>B</span>orn: Ben Tre Province <br/>
           <span>L</span>iving:  HO CHI MINH City, District 12. <br/><br/>
           <span>I</span>'m a student majoring in construction engineering at HO CHI MINH University Of Science and have a longstanding passion for mathematics, design and especially PROGRAMMING .<br />
-          <span>M</span>oreover, I'm a CAT lover guy and ... <span>"Never too late to begin!"</span>
+          <span>M</span>oreover, I'm a CAT lover guy and ... <span>"Never too late to begin!"</span> <br/>
+          <span>I</span> like playing soccer and researching new technology. <br/>
         </p>
       </div>
     </section>
