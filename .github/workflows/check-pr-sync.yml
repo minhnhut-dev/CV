@@ -1,0 +1,65 @@
+name: Check PR Sync with Main
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  check-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Lấy toàn bộ lịch sử commit
+          ref: ${{ github.head_ref }} # Checkout branch của PR
+
+      - name: Fetch main branch
+        run: git fetch origin main
+
+      - name: Check if branch is up-to-date with main
+        shell: bash
+        run: |
+          function error_exit {
+              echo "[ERROR] $1"
+              exit 1
+          }
+
+          # Ensure we're inside a Git repository
+          if ! git rev-parse --is-inside-work-tree &> /dev/null; then
+              error_exit "Bạn không ở trong một repository Git."
+          fi
+
+          # Get the current branch
+          current_branch=$(git branch --show-current)
+
+          # Ensure a current branch is found
+          if [ -z "$current_branch" ]; then
+              error_exit "Không tìm thấy branch hiện tại. Có thể bạn đang ở trạng thái detached HEAD."
+          fi
+
+          echo "Branch hiện tại của bạn là: $current_branch"
+
+          # Identify the main branch
+          main_branch="main"
+
+          # Fetch latest changes from remote
+          echo "Fetching latest changes from remote..."
+          git fetch || error_exit "Không thể fetch thông tin từ remote."
+
+          # Get the latest commit hash from the main branch on the remote
+          main_remote_commit=$(git rev-parse origin/$main_branch 2>/dev/null) || error_exit "Không tìm thấy branch 'origin/$main_branch'."
+
+          # Get the commit hash of the current branch
+          current_branch_commit=$(git rev-parse $current_branch 2>/dev/null) || error_exit "Không thể lấy thông tin commit của branch '$current_branch'."
+
+          # Check if the current branch is up to date with the main branch
+          echo "Kiểm tra nếu branch $current_branch đã đồng bộ với origin/$main_branch..."
+          if git merge-base --is-ancestor $main_remote_commit $current_branch_commit; then
+              echo "[SUCCESS] Branch '$current_branch' đã được đồng bộ với branch '$main_branch'."
+          else
+              error_exit "Branch '$current_branch' chưa được đồng bộ với branch '$main_branch'. Hãy pull các thay đổi mới nhất."
+          fi
