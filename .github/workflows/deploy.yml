@@ -44,4 +44,4 @@ jobs:
         script: |
           IMAGE_NAME="${{ secrets.DOCKER_USERNAME }}/ma-yone:${{ github.sha }}"
           echo "Deploying $IMAGE_NAME to EC2..."
-          /home/deploy/deploy.sh $IMAGE_NAME
+          /home/ubuntu/deploy.sh $IMAGE_NAME
