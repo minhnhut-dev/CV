@@ -39,8 +39,9 @@ jobs:
       with:
         host: ${{ secrets.EC2_HOST }}           # Public IP hoặc DNS của EC2 instance
         username: ${{ secrets.EC2_USER }}       # SSH user (ví dụ: ubuntu hoặc ec2-user)
-        key: ${{ secrets.EC2_SSH_KEY }}         # Private key của EC2 instance
+        key: ${{ secrets.EC2_SSH_KEY }}       # Private key của EC2 instance
+
         script: |
           IMAGE_NAME="${{ secrets.DOCKER_USERNAME }}/ma-yone:${{ github.sha }}"
           echo "Deploying $IMAGE_NAME to EC2..."
-          /home/ec2-user/deploy.sh $IMAGE_NAME
+          /home/deploy/deploy.sh $IMAGE_NAME
